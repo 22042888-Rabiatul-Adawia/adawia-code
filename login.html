@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: Rabi'atul Adawia Binte Muhamad Sabiren
+Student ID: 22042888
+Class: E63C
+Date/Time Last modified: 14/08/2023 04:19 PM
+-->
+<html>
+<head>
+  <title>AdaLife Insurance</title>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(login4.jpg);
+  background-repeat: no-repeat;
+}
+
+.login-container {
+  top: 80px;
+  align-items: center;  
+  width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #e0e3c3;
+  border: 1px solid #e0e3c3;
+  border-radius: 4px;
+  height: 500px;
+  margin-left: 250px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 5px;
+  margin: 1px 0 8px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover {
+  color: black;
+
+}
+</style>
+<body>
+  <img src="logo.png" alt="logo">
+  <div class="login-container">
+    <h2>Login</h2>
+    <hr>
+    <a href="https://www.singpass.gov.sg/home/ui/login"><img src="SP.jpg" alt="Login with Singpass" style="position: relative; width: 250px; left: 85px; border-radius: 10px;"></a>
+    <p style="text-align:center">------------------------------ Or ------------------------------</p>
+    <a href="index.html" style="position: relative;left: 130px; color: rgb(45, 45, 219);"> Continue as Guest</a>
+    <p style="text-align:center">------------------------------ Or ------------------------------</p>
+    <form action="index.html">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+        <div>
+          <input type="submit" value="Login">
+          <div class="links">
+            <a href="#">Forgot Password</a>
+            <a href="signup.html"> Register Now!</a>
+          </div>          
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

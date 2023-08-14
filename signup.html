@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: Rabi'atul Adawia Binte Muhamad Sabiren
+Student ID: 22042888
+Class: E63C
+Date/Time Last modified: 14/08/2023 05:15 PM
+-->
+<html>
+<head>
+  <title>Sign Up</title>
+  
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(login4.jpg);
+    background-repeat: no-repeat;
+  }
+  img{
+    width:auto;
+    height: auto;
+  }
+  
+  .login-container {
+  align-items: center;  
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #e0e3c3;
+  border: 1px solid #e0e3c3;
+  border-radius: 4px;
+  height: 460px;
+  margin-left: 250px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type=text], input[type=password] {
+  width: 90%;
+  padding: 5px;
+  margin: 1px 0 8px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+</style>
+<body>
+  <img src="logo.png" alt="logo">
+    <form action="index.html">
+      <div class="login-container">
+        <h2><b>Sign Up</b></h2>
+        <hr>
+        <!-- use of w3School -->
+          <label for="ic"><b>NRIC: </b></label>
+          <input type="text" placeholder="Eg. S1234567B" name="ic" required>
+
+          <label for="email"><b>Email: </b></label>
+          <input type="text" placeholder="Eg. 123@gmail.com" name="email" required>
+
+          <label for="psw" id="pwd"><b>Password: </b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required minlength="8">
+
+          <label for="psw-repeat" id="rpwd"><b>Repeat Password: </b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+          <span class="error-message"></span>
+
+          <br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+    
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Conditions</a>.</p>
+          <div>
+            <input id="signupButton" type="submit" value="Sign Up" onclick="checkInputs()">
+          </div>
+        </form>
+      </div>
+      <script>
+
+    // Make sure all fields are filled
+    function checkInputs() {
+      const passwordInput = document.getElementById("pwd");
+      const repeatPasswordInput = document.getElementById("rpwd");
+      const signupButton = document.getElementById("signupButton");
+
+      if(passwordInput.value == repeatPasswordInput.value){
+        signupButton.removeAttribute("disabled"); 
+
+      } else {
+        signupButton.removeAttribute("disabled", "true");
+      }
+    }
+  </script>
+</body>
+</html>
